@@ -5,6 +5,17 @@
 .mobile-question-bg{display:none}
 .question-title h1{font-size:24px;line-height:30px;font-weight:500}
 .mobile-question-break{display:none}
+/* First page load only: independent, calm story/card entrance. */
+.welcome.entry{animation:none}
+.welcome.entry>.story{animation:landing-story-in .72s .3s ease-out both}
+.welcome.entry>.welcome-art{animation:landing-art-in .72s .3s ease-out both}
+@keyframes landing-story-in{from{opacity:0;transform:translateX(-18px)}to{opacity:1;transform:translateX(0)}}
+@keyframes landing-art-in{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:translateX(0)}}
+@media(max-width:700px){
+  @keyframes landing-story-in{from{opacity:0;transform:translateX(-10px)}to{opacity:1;transform:translateX(0)}}
+  @keyframes landing-art-in{from{opacity:0;transform:translateX(10px)}to{opacity:1;transform:translateX(0)}}
+}
+@media(prefers-reduced-motion:reduce){.welcome.entry>.story,.welcome.entry>.welcome-art{animation:none!important;opacity:1;transform:none}}
 .curious-frame{position:relative;flex-shrink:0}
 .share-icon{display:grid;place-items:center;width:24px;height:24px;flex-shrink:0}
 .primary .share-icon img{width:22.5px;height:21px}
