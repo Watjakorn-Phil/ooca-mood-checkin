@@ -1,0 +1,15 @@
+/* The transparent Figma character layer sits inside the original 278px motion frame. */
+.curious-frame{position:relative;flex-shrink:0}
+.share-icon{display:grid;place-items:center;width:24px;height:24px;flex-shrink:0}
+.primary .share-icon img{width:22.5px;height:21px}
+.curious-frame>img{position:absolute;left:33.45px;top:29px;width:211.5px;height:224px;max-width:none}
+/* Allow grid/flex children to shrink instead of widening the viewport. */
+header{width:100%;min-width:0;gap:16px}
+.brand{min-width:0}
+.nav-label{flex-shrink:0}
+.welcome{grid-template-columns:minmax(0,1fr) 480px}
+.story,.welcome-art,.greeting{min-width:0}
+.greeting{max-width:100%;padding-inline:16px}
+.details{flex-wrap:wrap}
+@media(min-width:701px) and (max-width:1100px){.welcome{grid-template-columns:minmax(0,1fr) minmax(0,42%)}}
+@media(max-width:700px){.welcome-art .curious-frame{transform:none}.curious-frame>img{left:54.56px;top:51px;width:169.2px;height:179.2px}}
