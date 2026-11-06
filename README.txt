@@ -1,20 +1,16 @@
-OOCA · Mood Check-in — Local static app
+OOCA Mood Check-in — release 20261107-audit2
 
-Open index.html by double-clicking it. No account or installation is needed.
-For a local web preview, run: node preview.cjs
-Then visit http://localhost:4173
+Static HTML/CSS/JavaScript. Publish the folder contents to GitHub Pages.
+No build/install step, backend, database, analytics, or answer persistence.
 
-All answers live only in browser memory, and are cleared after aggregation.
-No cookies, localStorage, analytics, backend, database, or answer transmission.
-The share button creates a PNG card locally containing only the mascot and result.
-The consultation link opens https://ooca.co/.
+All character scenes use original transparent Figma assets. Loading and results
+use SVG; the hero uses its original transparent character-layer PNG. Share cards
+are generated locally and contain no response details.
 
-Source: the supplied OOCA Figma design and prototype.
-Prompt font is bundled for offline use. Gotham Rounded is not supplied and is not
-installed on this computer; the English/logo font uses a rounded fallback.
-A licensed Gotham Rounded webfont can be added later.
+The source package includes original Prompt fonts and OOCA wordmark vectors.
+Non-wordmark English text/counters use a rounded fallback where Gotham Rounded
+has not been provided as a licensed webfont.
 
-Publishing has not been performed. This folder can be uploaded to static hosting
-when ready. GitHub is optional for local use; an account is needed if choosing
-GitHub for source hosting or GitHub Pages.
-
+Read UPDATE-INSTRUCTIONS.txt before replacing repository files. Preserve your
+.git directory and existing changes. Commit/push through GitHub Desktop, wait
+for a successful Pages deployment, and check RELEASE.txt on the public URL.
