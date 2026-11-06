@@ -1,7 +1,23 @@
 /* The transparent Figma character layer sits inside the original 278px motion frame. */
+@font-face{font-family:Prompt;src:url('assets/Prompt-Light.ttf') format('truetype');font-weight:300;font-display:swap}
+@font-face{font-family:Prompt;src:url('assets/Prompt-Medium.ttf') format('truetype');font-weight:500;font-display:swap}
+@font-face{font-family:Prompt;src:url('assets/Prompt-SemiBold.ttf') format('truetype');font-weight:600;font-display:swap}
+.mobile-question-bg{display:none}
+.question-title h1{font-size:24px;line-height:30px;font-weight:500}
+.mobile-question-break{display:none}
 .curious-frame{position:relative;flex-shrink:0}
 .share-icon{display:grid;place-items:center;width:24px;height:24px;flex-shrink:0}
 .primary .share-icon img{width:22.5px;height:21px}
+.teal-wash{position:fixed;inset:0;z-index:10;display:grid;place-items:center;background:#00c4b3;color:#fff;text-align:center;animation:wash-in .52s ease-in-out both}
+.wash-copy{display:flex;flex-direction:column;align-items:center;gap:14px;transform:translateY(-26px)}
+.wash-logo{font-family:'Gotham Rounded','Arial Rounded MT Bold',Prompt,sans-serif;font-weight:700;font-size:68px;line-height:96px}
+.wash-tagline{font-size:22px;line-height:36px;font-weight:500;opacity:.92}
+.teal-wash.wash-leaving{animation:wash-out .5s ease-in-out both}
+body:has(.teal-wash){overflow:hidden}
+@keyframes wash-in{from{opacity:0}to{opacity:1}}
+@keyframes wash-out{from{opacity:1}to{opacity:0}}
+@media(max-width:700px){.wash-copy{transform:translateY(-37px)}.wash-logo{font-size:46px;line-height:68px}.wash-tagline{font-size:16px;line-height:30px}}
+@media(prefers-reduced-motion:reduce){.teal-wash,.teal-wash.wash-leaving{animation:none!important}.teal-wash.wash-leaving{opacity:0}}
 .curious-frame>img{position:absolute;left:33.45px;top:29px;width:211.5px;height:224px;max-width:none}
 /* Allow grid/flex children to shrink instead of widening the viewport. */
 header{width:100%;min-width:0;gap:16px}
@@ -13,3 +29,39 @@ header{width:100%;min-width:0;gap:16px}
 .details{flex-wrap:wrap}
 @media(min-width:701px) and (max-width:1100px){.welcome{grid-template-columns:minmax(0,1fr) minmax(0,42%)}}
 @media(max-width:700px){.welcome-art .curious-frame{transform:none}.curious-frame>img{left:54.56px;top:51px;width:169.2px;height:179.2px}}
+/* Figma mobile questions intentionally omit the desktop mascot side panel. */
+@media(max-width:700px){
+  body:has(.quiz-shell){background:#f0fcf9}
+  body:has(.quiz-shell) header .logo{font-size:28px}
+  body:has(.quiz-shell) .nav-label{font-size:12px;line-height:16px;font-weight:500}
+  body:has(.quiz-shell) main{padding:12px 0 24px}
+  .quiz-shell{margin:0 auto}
+  .quiz-shell .back{margin:0 0 24px;height:24px;line-height:24px;font-weight:500}
+  .quiz-shell .quiz-card{gap:0}
+  .quiz-shell .question-art{display:none}
+  .quiz-shell .question-content{gap:24px}
+  .quiz-shell .progress-label{line-height:24px;font-weight:500}
+  .quiz-shell .progress-label b{line-height:20px}
+  .quiz-shell .progress{margin-top:12px}
+  .quiz-shell .question-title h1{font-size:24px;line-height:30px;font-weight:500}
+  .mobile-question-break{display:initial}
+  .quiz-shell .answer{min-height:88px;padding:16px;gap:14px;background:#fff;line-height:22px}
+  .quiz-shell .answer:has(input:checked){background:#e0f8f6}
+  .quiz-shell .letter{width:30px;height:30px;line-height:20px}
+  .quiz-shell .question-actions{gap:20px;align-items:center}
+  .quiz-shell .question-actions .primary{height:56px;line-height:16px}
+  .quiz-shell .question-actions .primary:disabled{opacity:1}
+  .quiz-shell #skip{font-size:16px;line-height:16px;min-height:16px;padding:0;font-weight:300}
+  body:has(.quiz-shell) footer{padding:18px 24px}
+  body:has(.quiz-shell) .background>img{display:none}
+  body:has(.quiz-shell) .mobile-question-bg{display:block;position:absolute;inset:0}
+  .mobile-question-bg img{position:absolute;max-width:none}
+  .mobile-bg-BlobTopLeft{left:-220px;top:-200px;width:560px;height:560px}
+  .mobile-bg-BlobBottomRight{left:60px;top:380px;width:560px;height:560px}
+  .mobile-bg-BlobMidLeft{left:-160px;top:200px;width:400px;height:400px}
+  .mobile-bg-WaveBottom{left:0;bottom:0;width:100%;height:124px}
+  .mobile-bg-Star1{left:86%;top:184px;width:10px;height:10px}
+  .mobile-bg-Star2{left:24px;top:420px;width:7px;height:7px}
+  .mobile-bg-Star3{right:6%;top:653px;width:8px;height:8px}
+  .mobile-bg-Star4{left:17px;top:701px;width:6px;height:6px}
+}

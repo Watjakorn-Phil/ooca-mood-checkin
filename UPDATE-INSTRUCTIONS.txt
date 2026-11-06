@@ -1,0 +1,80 @@
+OOCA Mood Check-in — complete audited update
+
+Use ooca-complete-update.zip. It replaces the need for either earlier fix ZIP.
+The ZIP contains the complete static app, including the already-correct hero
+transparency and original Figma Share SVG. No repository was overwritten here.
+
+GITHUB DESKTOP — UPDATE THE PUBLIC SITE
+1. In GitHub Desktop, select ooca-mood-checkin.
+2. Choose Repository > Show in Explorer to locate the actual repository.
+3. Extract ooca-complete-update.zip to a temporary folder.
+4. Copy the CONTENTS of that folder into the repository root. Replace existing
+   files when asked. index.html must remain at the root beside app.js, styles.css,
+   motion.css, start-fixes.css, mobile-motion.css, and the assets folder.
+   Do not place the entire extracted folder inside another nested folder.
+5. Return to GitHub Desktop. Review the changed and added files.
+6. Enter summary: Fix all mascot transparency, mobile quiz, and teal transition
+7. Click Commit to main (or the branch configured for Pages), then Push origin.
+8. Wait for the Pages deployment to finish. Open
+   https://watjakorn-phil.github.io/ooca-mood-checkin/
+   Press Ctrl+Shift+R if old assets remain cached.
+
+WHAT CHANGED
+- Replaced eight opaque mascot PNG references with original transparent Figma
+  SVG exports. Source node mapping:
+    Question 1: 32:14622 -> assets/mooca-q1.svg
+    Question 2: 32:14714 -> assets/mooca-q2.svg
+    Question 3: 32:14815 -> assets/mooca-q3.svg
+    Loading:    92:4382 -> assets/mooca-loading.svg
+    Result A: 32:14921 -> assets/mooca-A.svg
+    Result B: 32:14989 -> assets/mooca-B.svg
+    Result C: 32:15066 -> assets/mooca-C.svg
+    Result D: 32:15153 -> assets/mooca-D.svg
+  Exports include the complete original illustration: D's fade/trails, A's cloud,
+  C's companion, the loading bubble, and question props remain intact. Existing
+  12-second mascot animation tracks are retained. Mobile results/loading use the
+  same exact artwork at their existing responsive sizes. Mobile question frames
+  intentionally contain no mascot panel, as in Figma.
+- Share-card generation uses the transparent result SVGs too.
+- Restored teal OOCA wash before Q1 from Figma 67:4174 and 67:4177:
+  520ms fade in, 500ms hold, 500ms dissolve to Q1; no lateral slide.
+- Matched mobile question layout to 32:15295, 32:15340, 32:15385 at 390x844:
+  removed the desktop mascot panel; corrected header logo/label sizing; set
+  progress labels at y=132, track gap 12px, first card at y=316; 88px answer cards,
+  16px padding, 14px inner gap, 30px letter badges; 24px form gaps; 56px primary
+  action and 20px skip gap; restored Q3's mobile heading break.
+- Reused original Figma mobile background SVGs, Back arrow, and motion tracks.
+- Bundled Prompt Light, Medium, and SemiBold so Thai text uses the real weights.
+- Corrected question headings to the Figma 24px / 30px / Medium specification.
+- Retained the previously corrected transparent hero and 22.5x21 Share SVG.
+
+SOURCE FILES CHANGED/ADDED
+app.js, index.html, styles.css, start-fixes.css, mobile-motion.css;
+eight mascot SVGs listed above; nine mobile background/Back SVGs named
+assets/mobile-*.svg; Prompt-Light.ttf, Prompt-Medium.ttf, Prompt-SemiBold.ttf.
+The ZIP also includes retained runtime files and assets for a complete copy.
+Legacy opaque mascot PNGs are not used and need not be deleted from your repo.
+
+VERIFICATION
+- Original opaque PNGs were inspected: all eight had alpha=255 at their corners;
+  the already-correct hero had alpha=0. Figma source character frames had no fill.
+- Original SVGs exported directly from Figma without editing artwork or canvas.
+- Local screenshots checked desktop question art Q1/Q2/Q3, loading, all four
+  results; mobile start/loading/all results and all three question screens.
+- Mobile Q1 first card y=316 and progress label y=132; all answer cards 88px.
+- Desktop/mobile teal wash observed, followed by Q1; dissolve-only question
+  transition retained. Reduced-motion handling is included.
+- A and D share-card previews generated successfully with the transparent SVGs.
+- All 64 answer/skip combinations checked for majority/latest-answer/D rules.
+- JavaScript syntax check passed; SVG exports are complete and self-contained.
+- No backend, analytics, persistent answer storage, or third-party asset calls
+  were added. Native OS sharing was not sent to another person during testing.
+
+LIMITATION
+Gotham Rounded remains a rounded fallback because a licensed webfont was not
+provided. Thai Prompt weights are bundled. English lettering can differ slightly.
+
+PUBLICATION STATUS
+These comprehensive changes are local only. No commit, push, or deployment was
+performed. The earlier live check confirmed the hero and Share-icon fixes, but
+this new full update needs your GitHub Desktop commit/push before it is public.
