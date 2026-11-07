@@ -130,3 +130,6 @@ header .tagline{height:24px;display:flex;align-items:center}
  .wash-logo,.wash-logo img{width:118px;height:48px}
  .wash-tagline{font-size:16px;line-height:36px}
 }
+
+.result-content>.privacy{align-self:stretch;width:100%;text-align:center}
+dialog>.small{width:100%;text-align:center}
