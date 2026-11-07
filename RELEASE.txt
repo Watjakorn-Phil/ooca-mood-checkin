@@ -1,9 +1,1 @@
-OOCA Mood Check-in
-Release: 20261107-audit2
-
-This release includes original transparent Figma mascots, exact OOCA wordmark
-vectors, first-load entrance, teal Start wash, mobile question layouts, corrected
-loading layout, original Share SVG, and D retry action.
-
-To confirm deployment, open /ooca-mood-checkin/RELEASE.txt on GitHub Pages.
-The release text must read 20261107-audit2. Then hard-refresh the main page.
+20261107-figma-sync1

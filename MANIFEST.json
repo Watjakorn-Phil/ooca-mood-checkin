@@ -1,190 +1,57 @@
-[
-  {
-    "File": "app.js",
-    "Hash": "F61DF4949436B114709CBA42D8CAF5BF49AFE3E3BF92195619564CAE5CF4E46F"
-  },
-  {
-    "File": "index.html",
-    "Hash": "4820AAC47B407C107E916DE5E32AF780EFA509E43D4F0DC79BCCBE54E5E424CC"
-  },
-  {
-    "File": "mobile-motion.css",
-    "Hash": "3E1CA01C462EED343CC37039872EED6308A6F9E9E19BA2FEB0A2D71140311269"
-  },
-  {
-    "File": "motion.css",
-    "Hash": "EDD021D6DFD667E882EF0E646A83A85065CE5E5A9F414CDC09FA6FDE37448378"
-  },
-  {
-    "File": "README.txt",
-    "Hash": "63A94BDEC306F57723250E3BBE508FFF260B1B117A0E01170140D1A307051C90"
-  },
-  {
-    "File": "RELEASE.txt",
-    "Hash": "D4FFED3A4A8FB6F556BC9468058BE7165B2FFB5E17DEFE7C230BF4D98F5D754F"
-  },
-  {
-    "File": "start-fixes.css",
-    "Hash": "50ABB52AA022736201B091A1A3C5818A680C959B96AD1F0A012DE50995E0124D"
-  },
-  {
-    "File": "styles.css",
-    "Hash": "EB228842C0886A957D21F3B89399C743D5098CFB46C08D88C80CEDBFAB0FCD90"
-  },
-  {
-    "File": "UPDATE-INSTRUCTIONS.txt",
-    "Hash": "5F5CAD2B889AA59BEC7E0D3C7DC365C7D32370D870D5C38FDBFDCBD52FD7E216"
-  },
-  {
-    "File": "assets\\icon-share-regular.svg",
-    "Hash": "3D06FC6D1F13E6A8EF71AE2BB085C583F164E63701CB399C5EA96258687AA3EC"
-  },
-  {
-    "File": "assets\\imgBgEllipseBr.svg",
-    "Hash": "21DFA24048249313C6DADD59CB7F40E9F716D7A9ED029D9C57A1B8A8E35826C0"
-  },
-  {
-    "File": "assets\\imgBgEllipseCenter.svg",
-    "Hash": "9AAE9F163482C332D4F794818915A9866A528D1E47E106FD7D830392E1834976"
-  },
-  {
-    "File": "assets\\imgBgEllipseTl.svg",
-    "Hash": "939773F31DC738F4759544CB257E67B2C135FCA1156DB11129EE8F65183D0FD9"
-  },
-  {
-    "File": "assets\\imgBgEllipseWarm.svg",
-    "Hash": "26659C4447F06F6EBEDD7B4433A9B1853AD88211E22B8D419B4C9901C6C1FB9E"
-  },
-  {
-    "File": "assets\\imgBgStar1.svg",
-    "Hash": "0A68D4DB7BE3FADFA9653956C0FC4FEDA313321A7AA3AE01FACB9A9BE18D0319"
-  },
-  {
-    "File": "assets\\imgBgStar2.svg",
-    "Hash": "6CE44BA58DD13559EBA462EC22D4C68F8D4997AAF90FD0B0C92B6C5C91EA0FAD"
-  },
-  {
-    "File": "assets\\imgBgStar3.svg",
-    "Hash": "0204B85E56B96BD5CFA8315D4D335B0B08A80F37B3CF61559081A5A4BC16F1F8"
-  },
-  {
-    "File": "assets\\imgBgStar4.svg",
-    "Hash": "0DB748C00FBEC4B9EC1D4BC5AE86DEA5C5334398A2949FA73B4B0D118752A7AF"
-  },
-  {
-    "File": "assets\\imgIconCursorRegular.svg",
-    "Hash": "E22ED65A9071AD73585ACCC6051E8F9C5B0F43F5AC0C463FA1B98F3DB9C4682C"
-  },
-  {
-    "File": "assets\\loading-halo-desktop.svg",
-    "Hash": "F8507BFFA3B4255CDB5878966CB0CAE5DEF6C70963C5D313459693B9131CA712"
-  },
-  {
-    "File": "assets\\loading-halo-mobile.svg",
-    "Hash": "F5BE792C8936BAE85F8916E410A9DDA71B2A47784DD4C53400C4597BD3C1A065"
-  },
-  {
-    "File": "assets\\loading-spinner.svg",
-    "Hash": "F897C39743E70149865084B6D2558DA49AD72ACF46D09BB894080AF0E76A6502"
-  },
-  {
-    "File": "assets\\mobile-imgBgBlobBottomRight.svg",
-    "Hash": "34ABA4327D8B85D9BE093393AD84B6B31E78DE35498DDCEC44A499BD35BAAA25"
-  },
-  {
-    "File": "assets\\mobile-imgBgBlobMidLeft.svg",
-    "Hash": "1422315A86FE06798AD1D178900804906FE42EACAB0BDB3D2864C587CBAE8248"
-  },
-  {
-    "File": "assets\\mobile-imgBgBlobTopLeft.svg",
-    "Hash": "AEDA4BBFDFBD9AACE07630DB20B29BF30CF5CE8AFF8EDF2C2F5F4FFD6E71A9BF"
-  },
-  {
-    "File": "assets\\mobile-imgBgStar1.svg",
-    "Hash": "C5CE219FAB7D505393D36C8BA9CB03E2B63198D83A414559541A9BD66ED7C560"
-  },
-  {
-    "File": "assets\\mobile-imgBgStar2.svg",
-    "Hash": "80AC852569858979565FB701F4385F02EE87CEB411DD6514530D5E96B81E0A26"
-  },
-  {
-    "File": "assets\\mobile-imgBgStar3.svg",
-    "Hash": "F16CA96B4467C392939B25EA784AD1610FA350ECDA1A20C567B4F603FBC00798"
-  },
-  {
-    "File": "assets\\mobile-imgBgStar4.svg",
-    "Hash": "43D5C5DD3857389AFDF4512081149DF44E5C01C1B3C18ED7838537313C2A5645"
-  },
-  {
-    "File": "assets\\mobile-imgBgWaveBottom.svg",
-    "Hash": "FB6BB79154EA15E3A90F86B2590877029F18957878FBCF9026027057C65E662F"
-  },
-  {
-    "File": "assets\\mobile-imgIconArrowSmallBack.svg",
-    "Hash": "66931D605E0A0EA68DF3559DFD6F6DF8C5485819A0B3C278BE8AB04F27A920D9"
-  },
-  {
-    "File": "assets\\mooca-A.svg",
-    "Hash": "784CAB90439AA31BCF883FBE0E2FF8C4417D6DBCF0AAE871EE426CBC40041BEE"
-  },
-  {
-    "File": "assets\\mooca-B.svg",
-    "Hash": "7C670EE6C46E9CA023E81F93D86A1E3D4D8B1EC4E83C03C913C4B7ABC6F54E07"
-  },
-  {
-    "File": "assets\\mooca-C.svg",
-    "Hash": "A93F02F85BDE7C586795DDF8B879701E6A8695E465D5CB215CD22EA79BE78E4A"
-  },
-  {
-    "File": "assets\\mooca-curious.png",
-    "Hash": "1CC464AAEDAB0B95FB37BB2140FC6B2A65DC46503D5B1F5425309B9C29CB8D43"
-  },
-  {
-    "File": "assets\\mooca-D.svg",
-    "Hash": "2F8195C19740BE03136006B9136043C0C14B7D6C79D925D4D57EBD1E000E4E4A"
-  },
-  {
-    "File": "assets\\mooca-loading.svg",
-    "Hash": "9D947F68F2C133569414C52BDDA0DFBE30D7889CC28A986EDB2F76411DF5D06A"
-  },
-  {
-    "File": "assets\\mooca-q1.svg",
-    "Hash": "D0961542B8398F4C14BED649B0618EAEEE8F7899CD9130C31F45D28B95D31321"
-  },
-  {
-    "File": "assets\\mooca-q2.svg",
-    "Hash": "91BC417118E6AB24016DAD2690241E37D4F586699CD11CF4F47BC4D2A105EE79"
-  },
-  {
-    "File": "assets\\mooca-q3.svg",
-    "Hash": "559F0EEE07A20CA55A4CFDA4E9A999AC5AB14526D0AC5D3566ED0ECBA13F44BF"
-  },
-  {
-    "File": "assets\\ooca-wordmark-teal.svg",
-    "Hash": "52D564A48278FA0CB26586D23AE50C7489169A47F8FD16CC6A4ABD4EB4A23BDE"
-  },
-  {
-    "File": "assets\\ooca-wordmark-white-desktop.svg",
-    "Hash": "2BCDAD942EF404249E91B54BEE1484B97A740EDA51B121E28B81C9E0B3E48672"
-  },
-  {
-    "File": "assets\\ooca-wordmark-white-mobile.svg",
-    "Hash": "D1F7372D5CC1DA7D03B607EAED22D3C94B7F88EE9F6DBD8CE1E0F19F3CBB0859"
-  },
-  {
-    "File": "assets\\Prompt-Light.ttf",
-    "Hash": "79412CF5EF7F60D7F1DFF4E178707B0BC662DD76608697A7A36B4769454F8B82"
-  },
-  {
-    "File": "assets\\Prompt-Medium.ttf",
-    "Hash": "6A42451BE692EBA473C639F4BCDC6C6D9160A3D632319A64287E3ED1FAE15D6B"
-  },
-  {
-    "File": "assets\\Prompt-Regular.ttf",
-    "Hash": "DBD497803CEC3CAFFBC6B7F599CA6FED8BEEA0ED7E0AD1E098130C5EBBC4FD42"
-  },
-  {
-    "File": "assets\\Prompt-SemiBold.ttf",
-    "Hash": "3285C9E6A4EBC480A6476A1A26B44D6EB0F9874025FA96E42AFD52172B7F02B9"
+{
+  "release": "20261107-figma-sync1",
+  "files": {
+    "app.js": "c246e85c140f8364dce0e22cc23ee6d44ea28e845a491966652f28b2f0789332",
+    "FIGMA-SYNC-CHANGE-REPORT.txt": "cc81d6d833871b66545347c1e6068c4197fdb6db7275a30b18ad921015e706cb",
+    "index.html": "aa62d028c300e7aaccf0440bf5d0f46452e9b9f8629923ea93905f5794e54658",
+    "mobile-motion.css": "3e1ca01c462eed343cc37039872eed6308a6f9e9e19ba2feb0a2d71140311269",
+    "motion.css": "edd021d6dfd667e882ef0e646a83a85065ce5e5a9f414cdc09fa6fde37448378",
+    "README.txt": "95015af2114d55213e493310c6d68454c79c7991597dfedf361793c5ba57e73f",
+    "RELEASE.txt": "3a9070b55efa36ca64ee96562543f9f0f7c10374f28d7fc662b585c636e3e4a9",
+    "start-fixes.css": "4981d76358615c64a5c51436bb9c1b222c6dec518da6c81b3fb556587133c0f7",
+    "styles.css": "eb228842c0886a957d21f3b89399c743d5098cfb46c08d88c80cedbfab0fcd90",
+    "UPDATE-INSTRUCTIONS.txt": "9aa39ecdda0c487c8fd7c74705c8055f12d7850060cec697c48c4a88c68d1b81",
+    "assets/icon-share-regular.svg": "3d06fc6d1f13e6a8ef71ae2bb085c583f164e63701cb399c5ea96258687aa3ec",
+    "assets/imgBgEllipseBr.svg": "21dfa24048249313c6dadd59cb7f40e9f716d7a9ed029d9c57a1b8a8e35826c0",
+    "assets/imgBgEllipseCenter.svg": "9aae9f163482c332d4f794818915a9866a528d1e47e106fd7d830392e1834976",
+    "assets/imgBgEllipseTl.svg": "939773f31dc738f4759544cb257e67b2c135fca1156db11129ee8f65183d0fd9",
+    "assets/imgBgEllipseWarm.svg": "26659c4447f06f6ebedd7b4433a9b1853ad88211e22b8d419b4c9901c6c1fb9e",
+    "assets/imgBgStar1.svg": "0a68d4db7be3fadfa9653956c0fc4feda313321a7aa3ae01facb9a9be18d0319",
+    "assets/imgBgStar2.svg": "6ce44ba58dd13559eba462ec22d4c68f8d4997aaf90fd0b0c92b6c5c91ea0fad",
+    "assets/imgBgStar3.svg": "0204b85e56b96bd5cfa8315d4d335b0b08a80f37b3cf61559081a5a4bc16f1f8",
+    "assets/imgBgStar4.svg": "0db748c00fbec4b9ec1d4bc5ae86dea5c5334398a2949fa73b4b0d118752a7af",
+    "assets/imgIconCursorRegular.svg": "e22ed65a9071ad73585accc6051e8f9c5b0f43f5ac0c463fa1b98f3db9c4682c",
+    "assets/loading-halo-desktop.svg": "f8507bffa3b4255cdb5878966cb0cae5def6c70963c5d313459693b9131ca712",
+    "assets/loading-halo-mobile.svg": "f5be792c8936bae85f8916e410a9dda71b2a47784dd4c53400c4597bd3c1a065",
+    "assets/loading-spinner.svg": "f897c39743e70149865084b6d2558da49ad72acf46d09bb894080af0e76a6502",
+    "assets/mobile-imgBgBlobBottomRight.svg": "34aba4327d8b85d9be093393ad84b6b31e78de35498ddcec44a499bd35baaa25",
+    "assets/mobile-imgBgBlobMidLeft.svg": "1422315a86fe06798ad1d178900804906fe42eacab0bdb3d2864c587cbae8248",
+    "assets/mobile-imgBgBlobTopLeft.svg": "aeda4bbfdfbd9aace07630db20b29bf30cf5ce8aff8edf2c2f5f4ffd6e71a9bf",
+    "assets/mobile-imgBgStar1.svg": "c5ce219fab7d505393d36c8ba9cb03e2b63198d83a414559541a9bd66ed7c560",
+    "assets/mobile-imgBgStar2.svg": "80ac852569858979565fb701f4385f02ee87ceb411dd6514530d5e96b81e0a26",
+    "assets/mobile-imgBgStar3.svg": "f16ca96b4467c392939b25ea784ad1610fa350ecda1a20c567b4f603fbc00798",
+    "assets/mobile-imgBgStar4.svg": "43d5c5dd3857389afdf4512081149df44e5c01c1b3c18ed7838537313c2a5645",
+    "assets/mobile-imgBgWaveBottom.svg": "fb6bb79154ea15e3a90f86b2590877029f18957878fbcf9026027057c65e662f",
+    "assets/mobile-imgIconArrowSmallBack.svg": "66931d605e0a0ea68df3559dfd6f6df8c5485819a0b3c278be8ab04f27a920d9",
+    "assets/mooca-A.svg": "784cab90439aa31bcf883fbe0e2ff8c4417d6dbcf0aae871ee426cbc40041bee",
+    "assets/mooca-B.svg": "7c670ee6c46e9ca023e81f93d86a1e3d4d8b1ec4e83c03c913c4b7abc6f54e07",
+    "assets/mooca-C.svg": "a93f02f85bde7c586795ddf8b879701e6a8695e465d5cb215cd22ea79be78e4a",
+    "assets/mooca-curious.png": "1cc464aaedab0b95fb37bb2140fc6b2a65dc46503d5b1f5425309b9c29cb8d43",
+    "assets/mooca-D.svg": "2f8195c19740be03136006b9136043c0c14b7d6c79d925d4d57ebd1e000e4e4a",
+    "assets/mooca-loading.svg": "9d947f68f2c133569414c52bdda0dfbe30d7889cc28a986edb2f76411df5d06a",
+    "assets/mooca-q1.svg": "d0961542b8398f4c14bed649b0618eaeee8f7899cd9130c31f45d28b95d31321",
+    "assets/mooca-q2.svg": "91bc417118e6ab24016dad2690241e37d4f586699cd11cf4f47bc4d2a105ee79",
+    "assets/mooca-q3.svg": "559f0eee07a20ca55a4cfda4e9a999ac5ab14526d0ac5d3566ed0ecba13f44bf",
+    "assets/ooca-logo-desktop.svg": "af4cafaf214d965cdc8201a512b5f82b745066b95ff58aa8a5eed01c8541210b",
+    "assets/ooca-logo-mobile.svg": "c7be7c95548f4e0af14578a5f068d6ff58b67b9572956f3ca11f023bd52fad03",
+    "assets/ooca-wash-desktop.svg": "7a44b601facc750cd24c60b7e93d2e87634950dedd4629f7aeea419b6f64e0df",
+    "assets/ooca-wash-mobile.svg": "d46ac12f0673809ec1c08d0de62e565e9f9d18b83a1081f40df9527c1a802e12",
+    "assets/ooca-wordmark-teal.svg": "52d564a48278fa0cb26586d23ae50c7489169a47f8fd16cc6a4abd4eb4a23bde",
+    "assets/ooca-wordmark-white-desktop.svg": "2bcdad942ef404249e91b54bee1484b97a740eda51b121e28b81c9e0b3e48672",
+    "assets/ooca-wordmark-white-mobile.svg": "d1f7372d5cc1da7d03b607eaed22d3c94b7f88ee9f6dbd8ce1e0f19f3cbb0859",
+    "assets/Prompt-Light.ttf": "79412cf5ef7f60d7f1dff4e178707b0bc662dd76608697a7a36b4769454f8b82",
+    "assets/Prompt-Medium.ttf": "6a42451be692eba473c639f4bcdc6c6d9160a3d632319a64287e3ed1fae15d6b",
+    "assets/Prompt-Regular.ttf": "dbd497803cec3caffbc6b7f599ca6fed8beea0ed7e0ad1e098130c5ebbc4fd42",
+    "assets/Prompt-SemiBold.ttf": "3285c9e6a4ebc480a6476a1a26b44d6eb0f9874025fa96e42afd52172b7f02b9"
   }
-]
+}

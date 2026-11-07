@@ -112,3 +112,21 @@ header{width:100%;min-width:0;gap:16px}
   .mobile-bg-Star3{right:6%;top:653px;width:8px;height:8px}
   .mobile-bg-Star4{left:17px;top:701px;width:6px;height:6px}
 }
+
+/* Updated Figma vector branding, 7 November 2026. */
+.logo>picture,.logo>picture>img{display:block;width:102px;height:42px}
+header .tagline{height:24px;display:flex;align-items:center}
+.nav-label{font-weight:300}
+.loading-logo{left:80px;top:31px;height:42px}
+.wash-copy{position:absolute;left:0;top:41.333333vh;width:100%;gap:24px;transform:none}
+.wash-logo,.wash-logo img{width:160px;height:65px}
+.wash-tagline{height:36px;line-height:36px}
+@media(max-width:700px){
+ .logo>picture,.logo>picture>img{width:82px;height:34px}
+ header .tagline{display:none}
+ .nav-label{font-weight:500}
+ .loading-logo{left:24px;top:19px;height:34px}
+ .wash-copy{top:39.691943vh;gap:16px;transform:none}
+ .wash-logo,.wash-logo img{width:118px;height:48px}
+ .wash-tagline{font-size:16px;line-height:36px}
+}

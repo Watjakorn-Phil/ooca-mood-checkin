@@ -1,0 +1,69 @@
+OOCA fresh Figma comparison — 7 November 2026
+Local release: 20261107-figma-sync1
+Live release observed: 20261107-audit2
+Figma file cP7QsXj44yIInh4lXRwOqs, page 1:2.
+
+MEANINGFUL CHANGES SINCE THE PREVIOUS AUDIT
+1. New standalone logo frame 167:2790, named ooca-logo-color 1, 90x37,
+   with four vector children 167:2791–167:2794. It is a source asset,
+   not an additional quiz screen. Its blue c is a visible branding change.
+2. Desktop navigation is now component 167:2789 inside entry 93:4920,
+   with logo frame 167:2795 (102x42), four paths 167:2796–167:2799.
+   Desktop Start/Q1/Q2/Q3/A/B/C/D use instances 167:2801, 167:2840,
+   167:2842, 167:2839, 167:2844, 167:2838, 167:2843, 167:2841.
+   Desktop logo frame is x80/y31. The Thai tagline and right label remain.
+3. Mobile navigation is now component 167:2934 inside entry 93:5117,
+   logo 167:2935, paths 167:2936–167:2939. Logo frame 82x34 at x24/y19.
+   Start/Q1/Q2/Q3/A/B/C/D instances are 167:2950, 167:2959, 167:2968,
+   167:3067, 167:3076, 167:3094, 167:3103, 167:3112.
+4. Desktop teal transition 67:4174 replaces text wordmark 67:4175 with
+   vector logo frame 167:2825 and paths 167:2826–167:2829.
+   New frame is 160x65 at x640/y372. Tagline remains x460/y461.
+5. Mobile teal transition 67:4177 replaces text wordmark 67:4178 with
+   vector frame 167:2831 and paths 167:2832–167:2835.
+   New frame 118x48 at x136/y335. New tagline layer 167:2836 is centered
+   at y399, 16px Prompt Medium, 36px high; previously it began at y411.16.
+6. Loading adds navigation instances 167:2922 desktop and 167:3130 mobile,
+   each showing only the new logo. Desktop logo moves from old x64/y36
+   wordmark area to x80/y31; mobile uses x24/y19 and 82x34.
+7. Mobile loading halo and mascot now share group 162:7778. Their positions,
+   exported asset references, dimensions and motion are unchanged.
+8. Mobile Q3 and Result A/B/C content switched from grid-cell placement
+   with a 72px offset to ordinary column flow below the navigation.
+   Visual starting positions are unchanged. The app already uses column flow.
+
+CHECKED AND UNCHANGED
+- No additional end-user quiz, result, loading or prototype-entry screen was
+  found in the current page inventory. The additional top-level frame is the
+  standalone logo source described above.
+- All 19 prior screen motion payloads are identical to fresh motion payloads.
+- Entry: 300ms delay, 720ms smart animate; teal wash: 500ms hold and 500ms
+  dissolve; loading: 2 seconds. Existing destinations remain the same.
+- Main content, question wording, answer choices, result copy and actions
+  match the saved design-context snapshots outside the header changes.
+- Question 1's 127:111–127:150 illustration layers are NOT new since this
+  audit baseline: its fresh SVG export is byte-for-byte identical to the
+  existing mooca-q1.svg. No character was replaced or redrawn.
+- The standalone logo is new; share-card frames remain existing frames.
+
+LOCAL IMPLEMENTATION
+- Four unmodified SVG exports: ooca-logo-desktop.svg, ooca-logo-mobile.svg,
+  ooca-wash-desktop.svg, ooca-wash-mobile.svg.
+- Responsive picture elements select the exact desktop/mobile logo exports.
+- Header, loading and transition positions/sizes follow the new Figma nodes.
+- CSS/JS URLs and RELEASE.txt identify 20261107-figma-sync1.
+- Original transparent mascots, quiz logic, privacy and sharing retained.
+
+VERIFICATION
+- Browser screenshots at 1440x900 and 390x844.
+- Desktop header bounds: x80/y31/102x42; mobile loading x24/y19/82x34.
+- Mobile wash logo: x136/y335/118x48; tagline top399.
+- Three skips reach D; Retry returns to Q1 with no selection.
+- JavaScript syntax check passed; all 64 answer combinations passed;
+  eight mascot SVGs checked complete, self-contained and without solid squares.
+- Fresh live inspection confirms audit2 still serves the old all-teal wordmark.
+- English non-logo text still uses the existing rounded font fallback because
+  a licensed Gotham Rounded webfont has not been supplied.
+
+No push or deployment was performed. The previous Pages failure was resolved
+by run #5; audit2 is currently live. This new package awaits the user's push.

@@ -14,7 +14,7 @@ if(typeof document!=='undefined'){
 const app=document.querySelector('#app'),status=document.querySelector('#status');let answers=[null,null,null],step=0,busy=false,timer=null,currentResult=null,shareBlob=null,shareUrl=null;
 const img=(name,cls='mascot',alt='')=>name==='curious'
   ? '<span class="'+cls+' curious-frame"><img src="assets/mooca-curious.png" width="211.5" height="224" alt="'+alt+'"></span>'
-  : '<img class="'+cls+'" src="assets/mooca-'+name+'.svg?v=20261107-audit2" width="278" height="278" alt="'+alt+'">';
+  : '<img class="'+cls+'" src="assets/mooca-'+name+'.svg?v=20261107-figma-sync1" width="278" height="278" alt="'+alt+'">';
 // Prototype: 520ms dissolve into teal, 500ms hold, 500ms dissolve to Q1.
 function beginCheckin(){
   if(busy)return;
@@ -22,7 +22,7 @@ function beginCheckin(){
   const wash=document.createElement('section');
   wash.className='teal-wash';
   wash.setAttribute('role','status');
-  wash.innerHTML='<div class="wash-copy"><picture class="wash-logo"><source media="(max-width:700px)" srcset="assets/ooca-wordmark-white-mobile.svg"><img src="assets/ooca-wordmark-white-desktop.svg" alt="ooca"></picture><p class="wash-tagline">ค่อย ๆ ฟังใจไปด้วยกัน</p></div>';
+  wash.innerHTML='<div class="wash-copy"><picture class="wash-logo"><source media="(max-width:700px)" srcset="assets/ooca-wash-mobile.svg"><img src="assets/ooca-wash-desktop.svg" alt="ooca"></picture><p class="wash-tagline">ค่อย ๆ ฟังใจไปด้วยกัน</p></div>';
   document.body.append(wash);
   document.querySelector('#begin').disabled=true;
   timer=setTimeout(()=>{
@@ -31,12 +31,12 @@ function beginCheckin(){
     timer=setTimeout(()=>wash.remove(),500);
   },1020);
 }
-const loadingArtwork=new Image();loadingArtwork.src='assets/mooca-loading.svg?v=20261107-audit2';
+const loadingArtwork=new Image();loadingArtwork.src='assets/mooca-loading.svg?v=20261107-figma-sync1';
 const bgNames=['EllipseTl','EllipseBr','EllipseCenter','EllipseWarm','Star1','Star2','Star3','Star4'];
 const mobileQuestionBackground=document.createElement('div');
 mobileQuestionBackground.className='mobile-question-bg';
 mobileQuestionBackground.setAttribute('aria-hidden','true');
-mobileQuestionBackground.innerHTML=['BlobTopLeft','BlobBottomRight','BlobMidLeft','WaveBottom','Star1','Star2','Star3','Star4'].map(name=>'<img class="mobile-bg-'+name+'" src="assets/mobile-imgBg'+name+'.svg?v=20261107-audit2" alt="">').join('');
+mobileQuestionBackground.innerHTML=['BlobTopLeft','BlobBottomRight','BlobMidLeft','WaveBottom','Star1','Star2','Star3','Star4'].map(name=>'<img class="mobile-bg-'+name+'" src="assets/mobile-imgBg'+name+'.svg?v=20261107-figma-sync1" alt="">').join('');
 
 document.querySelector('.background').innerHTML=bgNames.map((n,i)=>'<img class="'+['bg-ellipse-tl','bg-ellipse-br','bg-ellipse-center','bg-ellipse-warm','bg-star-1','bg-star-2','bg-star-3','bg-star-4'][i]+'" src="assets/imgBg'+n+'.svg" alt="">').join('');
 document.querySelector('.background').append(mobileQuestionBackground);
@@ -46,7 +46,7 @@ function start(first=false){clearTimeout(timer);answers=[null,null,null];current
 function question(){busy=false;const q=QUESTIONS[step];show('<section class="quiz-shell"><button class="back" id="back"><img src="assets/mobile-imgIconArrowSmallBack.svg" alt=""> <span>ย้อนกลับ</span></button><div class="quiz-card"><aside class="question-art">'+img('q'+(step+1),'mascot motion-q'+(step+1))+'<p>'+q.caption+'</p></aside><div class="question-content"><div><div class="progress-label"><span>ค่อย ๆ ฟังใจไปด้วยกัน</span><b>0'+(step+1)+' / 03</b></div><div class="progress" aria-label="คำถามที่ '+(step+1)+' จาก 3">'+[0,1,2].map(i=>'<span class="'+(i<=step?'done':'')+'"></span>').join('')+'</div></div><div class="question-title"><h1 id="question-title">'+(step===2?q.title.replace(' ๆ ',' ๆ <br class="mobile-question-break">'):q.title)+'</h1><p class="small" id="answer-help">เลือก 1 ข้อที่ใกล้กับความรู้สึกตอนนี้ที่สุด</p></div><fieldset class="answers" aria-labelledby="question-title" aria-describedby="answer-help">'+q.answers.map((a,i)=>{const v='ABC'[i];return '<label class="answer"><input type="radio" name="mood" value="'+v+'" '+(answers[step]===v?'checked':'')+'><span class="letter">'+v+'</span><span class="answer-text">'+a+'</span><span class="radio" aria-hidden="true"></span></label>';}).join('')+'</fieldset><div class="question-actions"><button class="primary" id="next" '+(!answers[step]?'disabled':'')+'>'+(step===2?'ดูโหมดของใจวันนี้':'ไปข้อต่อไป')+'</button><button class="text-button" id="skip">ข้ามข้อนี้</button></div></div></div></section>');
 app.querySelectorAll('input').forEach(input=>input.onchange=()=>{answers[step]=input.value;document.querySelector('#next').disabled=false;});document.querySelector('#back').onclick=()=>{if(step===0)start();else{step--;question();}};document.querySelector('#next').onclick=()=>advance(false);document.querySelector('#skip').onclick=()=>advance(true);}
 function advance(skip){if(busy)return;if(!skip&&!answers[step])return;busy=true;if(skip)answers[step]=null;if(step<2){step++;question();}else loading();}
-function loading(){currentResult=getOutcome(answers);answers=[null,null,null];show('<section class="loading-state" role="status"><span class="logo loading-logo"><img src="assets/ooca-wordmark-teal.svg" alt="ooca"></span><div class="loading-orbit">'+img('loading','mascot motion-loading')+'<img class="spinner motion-spinner" src="assets/loading-spinner.svg" alt="" aria-hidden="true"></div><h1>กำลังอ่านคำตอบของคุณ</h1><p>มูก้ากำลังเตรียมเรื่องราวของใจวันนี้...</p></section>');timer=setTimeout(result,2000);}
+function loading(){currentResult=getOutcome(answers);answers=[null,null,null];show('<section class="loading-state" role="status"><span class="logo loading-logo"><picture><source media="(max-width:700px)" srcset="assets/ooca-logo-mobile.svg"><img src="assets/ooca-logo-desktop.svg" alt="ooca"></picture></span><div class="loading-orbit">'+img('loading','mascot motion-loading')+'<img class="spinner motion-spinner" src="assets/loading-spinner.svg" alt="" aria-hidden="true"></div><h1>กำลังอ่านคำตอบของคุณ</h1><p>มูก้ากำลังเตรียมเรื่องราวของใจวันนี้...</p></section>');timer=setTimeout(result,2000);}
 function result(){
   busy=false;
   const key=currentResult,r=RESULTS[key];
@@ -60,7 +60,7 @@ function result(){
   document.querySelector('#share').onclick=share;
   if(key==='D')document.querySelector('#retry').onclick=()=>{answers=[null,null,null];step=0;currentResult=null;question();};
 }
-async function share(){const button=document.querySelector('#share');button.disabled=true;try{await document.fonts.ready;const r=RESULTS[currentResult],canvas=document.createElement('canvas');canvas.width=1080;canvas.height=1080;const ctx=canvas.getContext('2d');ctx.fillStyle=r.color;ctx.fillRect(0,0,1080,1080);ctx.fillStyle='#00a28b';ctx.font='bold 64px Prompt';ctx.textAlign='left';ctx.fillText('ooca',70,100);const character=new Image();character.src='assets/mooca-'+currentResult+'.svg?v=20261107-audit2';await character.decode();ctx.drawImage(character,280,140,520,520);ctx.textAlign='center';ctx.fillStyle='#686868';ctx.font='28px Prompt';ctx.fillText('เช็กอินใจในวันนี้กับ mooca',540,710);ctx.fillStyle='#272727';ctx.font='bold 50px Prompt';ctx.fillText(r.title,540,800);ctx.font='30px Prompt';ctx.fillText(r.tip,540,875);ctx.fillStyle='#686868';ctx.font='22px Prompt';ctx.fillText('สะท้อนความรู้สึกในวันนี้ ไม่ใช่การวินิจฉัย',540,1005);shareBlob=await new Promise(resolve=>canvas.toBlob(resolve,'image/png'));if(!shareBlob)throw new Error('image');if(shareUrl)URL.revokeObjectURL(shareUrl);shareUrl=URL.createObjectURL(shareBlob);document.querySelector('#share-preview').src=shareUrl;document.querySelector('#download-card').href=shareUrl;document.querySelector('#share-dialog').showModal();}catch(e){status.textContent='ไม่สามารถสร้างการ์ดได้ กรุณาลองอีกครั้ง';button.textContent='ลองสร้างการ์ดอีกครั้ง';}finally{button.disabled=false;}}
+async function share(){const button=document.querySelector('#share');button.disabled=true;try{await document.fonts.ready;const r=RESULTS[currentResult],canvas=document.createElement('canvas');canvas.width=1080;canvas.height=1080;const ctx=canvas.getContext('2d');ctx.fillStyle=r.color;ctx.fillRect(0,0,1080,1080);ctx.fillStyle='#00a28b';ctx.font='bold 64px Prompt';ctx.textAlign='left';ctx.fillText('ooca',70,100);const character=new Image();character.src='assets/mooca-'+currentResult+'.svg?v=20261107-figma-sync1';await character.decode();ctx.drawImage(character,280,140,520,520);ctx.textAlign='center';ctx.fillStyle='#686868';ctx.font='28px Prompt';ctx.fillText('เช็กอินใจในวันนี้กับ mooca',540,710);ctx.fillStyle='#272727';ctx.font='bold 50px Prompt';ctx.fillText(r.title,540,800);ctx.font='30px Prompt';ctx.fillText(r.tip,540,875);ctx.fillStyle='#686868';ctx.font='22px Prompt';ctx.fillText('สะท้อนความรู้สึกในวันนี้ ไม่ใช่การวินิจฉัย',540,1005);shareBlob=await new Promise(resolve=>canvas.toBlob(resolve,'image/png'));if(!shareBlob)throw new Error('image');if(shareUrl)URL.revokeObjectURL(shareUrl);shareUrl=URL.createObjectURL(shareBlob);document.querySelector('#share-preview').src=shareUrl;document.querySelector('#download-card').href=shareUrl;document.querySelector('#share-dialog').showModal();}catch(e){status.textContent='ไม่สามารถสร้างการ์ดได้ กรุณาลองอีกครั้ง';button.textContent='ลองสร้างการ์ดอีกครั้ง';}finally{button.disabled=false;}}
 document.querySelector('#native-share').onclick=async()=>{try{const file=new File([shareBlob],'mooca-today.png',{type:'image/png'});if(navigator.canShare&&navigator.canShare({files:[file]})){await navigator.share({files:[file],title:'OOCA · Mood Check-in'});}else{document.querySelector('#download-card').click();status.textContent='บันทึกการ์ดแล้ว สามารถนำไปแชร์ได้';}}catch(e){if(e.name!=='AbortError')status.textContent='แชร์ไม่ได้ในเบราว์เซอร์นี้ กรุณาเลือกบันทึกการ์ด';}};
 start(true);
 }

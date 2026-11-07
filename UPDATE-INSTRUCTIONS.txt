@@ -1,79 +1,29 @@
-OOCA — fresh visual audit and complete replacement
-Release 20261107-audit2
+OOCA — complete Figma branding update
+Release 20261107-figma-sync1
 
-WHAT THE FRESH LIVE AUDIT FOUND
-The live page accessed in this audit already used mooca-q1.svg, mooca-q3.svg,
-and transparent result SVGs. The balloon had no pale square on desktop; at
-390px mobile the question mascot panel was correctly hidden. Loading and all
-four results were also transparent. The supplied balloon-card screenshot does
-not match the version/layout captured from the live URL in this audit.
-The app's teal wash and corrected Share SVG were present live.
+This is a full static site package, not a patch. No build/install step required.
+The live site currently runs 20261107-audit2. Pages run #5 resolved the earlier
+deployment failure. No push or deployment has been performed for this update.
 
-ADDITIONAL MISMATCHES FIXED LOCALLY
-- Mobile landing card was vertically offset (y=108 instead of Figma y=80).
-- Mobile landing copy now retains Figma's opening line break.
-- Loading halo, spinner and labels now use Figma's coordinates, sizes and assets:
-  mobile halo x55/y140/280px; spinner 56px at x167/y448; desktop halo
-  x520/y164/400px at 1440x900; spinner 64px at x688/y502.
-- Loading artwork is preloaded to reduce an empty first frame.
-- Original teal and white OOCA wordmark vectors replace the fallback font in
-  the navigation, loading and teal wash. No logo was redrawn.
-- Exact Q2/Q3 companion captions restored and desktop Q3 word spacing fixed.
-- Mobile result title restored to 24/30px Medium, body to 14/24px Light,
-  reflection gap 14px, artwork-to-copy gap 18px.
-- D now has Figma's primary Retry action and separate Start-over action.
-  Sharing is retained as a secondary action to preserve the requested behavior.
-- Cache-versioned CSS/JS/mascot URLs and RELEASE.txt identify this new package.
-- Previously fixed transparent hero, all eight mascot SVGs, Share icon,
-  mobile Q1/Q2/Q3 layout, page-open entrance, dissolve transitions, and privacy
-  rules are retained.
+GITHUB DESKTOP STEPS
+1. Extract ooca-figma-sync1-complete.zip into a temporary folder.
+2. In GitHub Desktop select ooca-mood-checkin, then Repository > Show in Explorer.
+3. Copy the extracted CONTENTS into that existing repository root. Replace
+   matching files and merge the assets folder. index.html must stay in the
+   root; do not put the package inside another ooca folder.
+4. Preserve .git, .github and your existing unrelated files/settings. Do not
+   click Discard changes. Do not delete the repository or the assets folder.
+5. Review changes in GitHub Desktop. Expected changes: new four SVG logos,
+   index.html, app.js, start-fixes.css, release/readme and report/instructions.
+6. Commit with summary: Sync updated Figma vector branding
+7. Click Push origin when ready. Wait for the newest Pages deployment to pass.
+8. Open https://watjakorn-phil.github.io/ooca-mood-checkin/RELEASE.txt
+   It must show 20261107-figma-sync1. Hard refresh the main site (Ctrl+Shift+R).
+9. Check the blue c in the header logo, the white logo during the teal wash,
+   and the colored logo on the loading screen, on desktop and phone widths.
 
-GITHUB PAGES FAILURE: CONFIRMED FACTS
-Run #4:
-https://github.com/Watjakorn-Phil/ooca-mood-checkin/actions/runs/42267080560
-Commit: 2ca7bb6694c2b795e6d7efbe011487dd53670b51
-Build: succeeded in 20 seconds.
-Report-build-status: succeeded.
-Deploy: failed after 3m51s.
-Visible annotation: Deployment failed, try again later.
-Detailed logs require GitHub sign-in and were not accessible in the audit browser.
-The Node 20 deprecation message is a warning on the successful build job, not
-evidence that it caused this deployment failure.
+If a deployment fails, inspect that run's exact error before changing code.
+You can restore the previous audit2 version through GitHub Desktop history.
 
-No proven source-code cause was found for that failure. Do not discard files or
-change the app's build setup to address it. The immediate recovery is to retry
-the failed deployment from the signed-in Actions page. It has NOT been retried
-or resolved by Codex.
-
-UPDATE SAFELY WITH GITHUB DESKTOP
-1. Keep your current changes; do not click Discard changes or delete the repo.
-2. Select ooca-mood-checkin > Repository > Show in Explorer.
-3. Extract ooca-final-audited-update.zip to a temporary folder.
-4. Copy its CONTENTS into the existing repository root. Replace matching app
-   files and merge the assets folder. Do not copy a containing folder as a
-   nested site. Do not alter the .git directory or existing GitHub settings.
-5. Review the changes in GitHub Desktop. Commit with summary:
-   Complete Figma visual audit and transparent mascot assets
-6. Click Push origin. This starts a new Pages run.
-7. In GitHub > Actions, open the newest pages build and deployment run.
-8. If Build succeeds but Deploy again reports try again later, use the top-right
-   Re-run jobs > Re-run failed jobs. This requires your signed-in GitHub account.
-9. Wait for Deploy to show a green check. If it fails again, open Deploy >
-   Deploy to GitHub Pages and copy the exact error lines. A further fix depends
-   on that error; do not repeatedly change app code without that evidence.
-10. Open https://watjakorn-phil.github.io/ooca-mood-checkin/RELEASE.txt and confirm
-    20261107-audit2. Hard-refresh the main site (Ctrl+Shift+R).
-
-The new release is local only. No user repository files were overwritten by
-Codex, and no commit, push, workflow rerun, or deployment was performed.
-
-VERIFICATION
-Fresh screenshots cover landing/wash, Q1/Q2/Q3 desktop and mobile, loading,
-A/B/C/D results on both layouts, and share previews. See the audit HTML report.
-Local fixes were visually checked, including halo geometry, balloon, retry, and
-share-card generation. All 64 answer/skip outcome combinations passed.
-No answer persistence, backend, analytics or answer transmission was added.
-Native sharing to another person was not performed. Screenshot review does not
-constitute a full accessibility certification. English body text/counters still
-use a rounded fallback where a licensed Gotham Rounded font was not provided;
-OOCA brand wordmarks now use exact original vectors.
+Read FIGMA-SYNC-CHANGE-REPORT.txt for exact Figma node IDs and audit evidence.
+All required assets are local; answer data stays in memory and is not sent out.

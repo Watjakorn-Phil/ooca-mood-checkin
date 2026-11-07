@@ -1,4 +1,4 @@
-OOCA Mood Check-in — release 20261107-audit2
+OOCA Mood Check-in — release 20261107-figma-sync1
 
 Static HTML/CSS/JavaScript. Publish the folder contents to GitHub Pages.
 No build/install step, backend, database, analytics, or answer persistence.
